@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 59091d3a878b9b72b98c132652e76c6b)
+# DO NOT EDIT (digest: 1176ac35bce9728d518f5d61938b04c6)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -19,10 +19,10 @@ true: annot, bin_annot
 <src/main.{native,byte}>: pkg_cmdliner
 <src/main.{native,byte}>: pkg_cohttp
 <src/main.{native,byte}>: pkg_cohttp.lwt
+<src/main.{native,byte}>: pkg_cstruct.ppx
 <src/main.{native,byte}>: pkg_io-page.unix
 <src/main.{native,byte}>: pkg_lwt
 <src/main.{native,byte}>: pkg_lwt.preemptive
-<src/main.{native,byte}>: pkg_lwt.syntax
 <src/main.{native,byte}>: pkg_lwt.unix
 <src/main.{native,byte}>: pkg_nbd
 <src/main.{native,byte}>: pkg_nbd.lwt
@@ -41,10 +41,10 @@ true: annot, bin_annot
 <src/sparse_dd.{native,byte}>: pkg_cmdliner
 <src/sparse_dd.{native,byte}>: pkg_cohttp
 <src/sparse_dd.{native,byte}>: pkg_cohttp.lwt
+<src/sparse_dd.{native,byte}>: pkg_cstruct.ppx
 <src/sparse_dd.{native,byte}>: pkg_io-page.unix
 <src/sparse_dd.{native,byte}>: pkg_lwt
 <src/sparse_dd.{native,byte}>: pkg_lwt.preemptive
-<src/sparse_dd.{native,byte}>: pkg_lwt.syntax
 <src/sparse_dd.{native,byte}>: pkg_lwt.unix
 <src/sparse_dd.{native,byte}>: pkg_nbd
 <src/sparse_dd.{native,byte}>: pkg_nbd.lwt
@@ -66,10 +66,10 @@ true: annot, bin_annot
 <src/*.ml{,i,y}>: pkg_cmdliner
 <src/*.ml{,i,y}>: pkg_cohttp
 <src/*.ml{,i,y}>: pkg_cohttp.lwt
+<src/*.ml{,i,y}>: pkg_cstruct.ppx
 <src/*.ml{,i,y}>: pkg_io-page.unix
 <src/*.ml{,i,y}>: pkg_lwt
 <src/*.ml{,i,y}>: pkg_lwt.preemptive
-<src/*.ml{,i,y}>: pkg_lwt.syntax
 <src/*.ml{,i,y}>: pkg_lwt.unix
 <src/*.ml{,i,y}>: pkg_nbd
 <src/*.ml{,i,y}>: pkg_nbd.lwt
@@ -91,10 +91,10 @@ true: annot, bin_annot
 "src/sendfile64_stubs.c": pkg_cmdliner
 "src/sendfile64_stubs.c": pkg_cohttp
 "src/sendfile64_stubs.c": pkg_cohttp.lwt
+"src/sendfile64_stubs.c": pkg_cstruct.ppx
 "src/sendfile64_stubs.c": pkg_io-page.unix
 "src/sendfile64_stubs.c": pkg_lwt
 "src/sendfile64_stubs.c": pkg_lwt.preemptive
-"src/sendfile64_stubs.c": pkg_lwt.syntax
 "src/sendfile64_stubs.c": pkg_lwt.unix
 "src/sendfile64_stubs.c": pkg_nbd
 "src/sendfile64_stubs.c": pkg_nbd.lwt
@@ -115,5 +115,3 @@ true: annot, bin_annot
 "src/sendfile64_stubs.c": pkg_xenstore_transport.unix
 <src/sparse_dd.{native,byte}>: custom
 # OASIS_STOP
-<src/chunked.ml>: syntax_camlp4o, pkg_cstruct.syntax
-<src/input.ml>: syntax_camlp4o, pkg_lwt.syntax
