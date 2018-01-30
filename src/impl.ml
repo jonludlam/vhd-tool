@@ -673,7 +673,8 @@ let write_stream common s destination source_protocol destination_protocol preze
   let use_ssl = match endpoint with Https _ -> true | _ -> false in
   ( match endpoint with
     | File path ->
-      Lwt_unix.openfile path [ Unix.O_RDWR; Unix.O_CREAT ] 0o0644 >>= fun fd ->
+      let unix_fd = Vhd_format_lwt.File.openfile path true 0o644 in
+      let fd = Lwt_unix.of_unix_file_descr unix_fd in
       Channels.of_seekable_fd fd >>= fun c ->
       return (c, [ NoProtocol; Human; Tar ])
     | Null ->
